@@ -1,0 +1,85 @@
+{
+  "name": "hexagonalpathfindingvisualiser",
+  "version": "1.0.0",
+  "description": "Visualise path finding algorithms on a hexagonal grid.",
+  "browser": "index.html",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "format_check": "prettier -c **/*.js",
+    "lint": "eslint .",
+    "pretest": "npm run format_check && npm run lint",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rory-Sullivan/Hexagonal-Path-Finding-Visualiser.git"
+  },
+  "author": "Rory Sullivan <codingrory@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rory-Sullivan/Hexagonal-Path-Finding-Visualiser/issues"
+  },
+  "homepage": "https://github.com/Rory-Sullivan/Hexagonal-Path-Finding-Visualiser#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^10.2.0",
+    "prettier": "^2.0.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "globals": {
+      "hexSize": "readonly",
+      "grid": "writable",
+      "animationDelay": "readonly",
+      "timeoutId": "writable",
+      "bgCanvas": "readonly",
+      "bgContext": "readonly",
+      "animationCanvas": "readonly",
+      "animationContext": "readonly",
+      "instructions": "readonly"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "import/extensions": [
+        "error",
+        "always"
+      ],
+      "no-param-reassign": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.test.js"
+        ],
+        "env": {
+          "mocha": true
+        },
+        "globals": {
+          "expect": "readonly"
+        },
+        "rules": {
+          "func-names": "off",
+          "prefer-arrow-callback": "off"
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

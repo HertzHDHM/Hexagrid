@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path Finding Visualiser</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preload" href="./images/tutorial.png" as="image" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+  </head>
+
+  <body>
+    <div id="appContainer">
+      <div id="header">
+        <div id="instructionsContainer">
+          <h2 id="instructions">Select start position</h2>
+        </div>
+        <div id="resetContainer">
+          <button id="resetButton">Reset</button>
+        </div>
+        <div class="buttonsContainer" id="algorithmButtons">
+          <h3>Start Algorithm</h3>
+          <button id="dijkstraButton">Dijkstra</button>
+          <button id="aStarButton">A*</button>
+          <button id="biasedAStarButton">Biased A*</button>
+        </div>
+
+        <div class="buttonsContainer" id="mazeButtons">
+          <h3>Add a Maze</h3>
+          <button id="randomMazeButton">Random maze</button>
+          <button id="verticalMazeButton">Vertical maze</button>
+          <button id="horizontalMazeButton">Horizontal maze</button>
+          <button id="radialMazeButton">Radial maze</button>
+        </div>
+
+        <div class="buttonsContainer" id="tutorialButton">
+          <h3>Not sure what to do?</h3>
+          <button id="tutorialButton">Click here</button>
+        </div>
+
+        <div class="buttonsContainer" id="links">
+          <div class="logo">
+            <a
+              href="https://github.com/Rory-Sullivan/Hexagonal-Path-Finding-Visualiser"
+            >
+              <img
+                src="./images/GitHub-Mark/GitHub-Mark-32px.png"
+                alt="GitHub logo"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="canvasContainer">
+        <canvas id="background"></canvas>
+        <canvas id="animation"></canvas>
+      </div>
+    </div>
+
+    <div id="tutorial" class="modal">
+      <div class="modalContent">
+        <span id="closeTutorial" class="close">&times;</span>
+        <img src="./images/tutorial.png" alt="Tutorial" />
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
